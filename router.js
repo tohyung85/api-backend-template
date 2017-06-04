@@ -15,7 +15,6 @@ module.exports = function(app) {
         res.status(200).send('Access granted!');
     });
 
-    app.get('/users/:email', User.getUser);
     app.post('/users/signin', requireSignin, Authentication.signin);
     app.post('/users/signup', Authentication.signup);
 }
